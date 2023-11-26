@@ -1,38 +1,46 @@
-<h1 class="my-3 text-primary">
-    Listar Produtos
-    <button type="button" routerLink="/produtos/cadastrar" class="btn btn-success mt-2 float-right">
+<div class="container">
+  <h1 class="my-3 text-primary">
+    Listar Semaforos
+    <button
+      type="button"
+      routerLink="/semaforos/cadastrar"
+      class="btn btn-success mt-2 float-right"
+    >
       Cadastrar
     </button>
   </h1>
-  
+
   <div class="card shadow">
     <table class="table table-responsive table striped">
       <thead>
         <tr>
           <th>#</th>
           <th>Nome</th>
-          <th>localizacao</th>
+          <th>Localizacao</th>
           <th>Status</th>
           <th>Ações</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor = "let semaforo of listaSemaforos">
-          <td>{{ semaforo.id }}</td>
+        <tr *ngFor="let semaforo of listaSemaforos">
+          <td><img src="../../../../assets/img/streetEye.png" alt="Semaforo"></td>
           <td>{{ semaforo.nome }}</td>
           <td>{{ semaforo.localizacao }}</td>
           <td>{{ semaforo.status }}</td>
           <td></td>
-          <button type="button" routerLink="/produtos/atualizar/{{semaforo.id}}" class="btn btn-warning">
+          <button
+            type="button"
+            routerLink="/semaforos/atualizar/{{ semaforo.id }}"
+            class="btn btn-warning"
+          >
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </button>
-  
+
           <button class="btn btn-danger ml-2">
             <i class="fa fa-trash-o" aria-hidden="true"></i>
           </button>
-  
         </tr>
       </tbody>
     </table>
   </div>
-  
+</div>
