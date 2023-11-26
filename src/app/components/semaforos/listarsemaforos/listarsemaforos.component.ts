@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ISemaforo } from 'src/app/models/ISemaforo';
 
 @Component({
   selector: 'app-listarsemaforos',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./listarsemaforos.component.css']
 })
 export class ListarsemaforosComponent {
-
+    listaSemaforos: ISemaforo[] = [];
 }
