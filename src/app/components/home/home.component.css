@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+
+body{
+    background-color: white;
+    color: #292929;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+}
+
+main{
+    /* colocar as div uma ao lado da outra */
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.container-main{
+    max-width: 70%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 0;
+}
+
+h1{
+    margin-top: 20px;
+    font-size: 56px;
+    line-height: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h3{
+    line-height: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+}
+
+p span{
+    font-weight: 600;
+}
+
+span{
+    color: #4359FF;
+}
+
+#p-main{
+    line-height: 20px;
+    max-width: 400px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+aside {
+    margin-top: 80px;
+}
+
+#img-main{
+    width: 500px;
+    height: 500px;
+    pointer-events: none;
+    margin-left: 120px;
+}
+
+#botao-principal{
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #CCC;
+    font-size: 15px;
+    height: 40px;
+    background-color: #4359FF;
+    color: white;
+    font-weight: 700;
+    width: 40%;
+    cursor: pointer;
+}
+
+#botao-principal:hover{
+    transition: all 0.75s;
+    background-color: white;
+    border: 1px solid #4359FF;
+    color: #4359FF;
+}
+
+
+/* Card Integrante */
+.reviews-item {
+    position: relative;
+    padding: 2rem 1.25rem;
+}
+
+
+.reviews-item-info {
+    padding-top: 0.625rem;
+}
+
+.reviews-item-name {
+    margin-bottom: 0.125rem;
+    font-size: 1.125rem;
+}
+
+.reviews-item-header {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.reviews-item-position {
+    color: #63636b;
+    font-size: 1rem;
+}
+
+.reviews-item-img {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    min-width: 4.6875rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1.25rem;
+    background-color: #F0F4F8;
+}
+
+.reviews-item-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
