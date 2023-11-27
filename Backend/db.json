@@ -1,0 +1,18 @@
+{
+  "semaforos": [
+    {
+      "id": 1,
+      "nome": "Semaforo Av. Guilherme Cotching 01",
+      "latitude": "-23.512617",
+      "longitude": "-46.585236",
+      "status": "Online"
+    },
+    {
+      "id": 2,
+      "nome": "Semaforo Av. Guilherme Cotching 02",
+      "latitude": "-23.512617",
+      "longitude": "-46.585236",
+      "status": "Offline"
+    }
+  ]
+}
