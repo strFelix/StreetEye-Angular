@@ -21,4 +21,15 @@ export class ListarsemaforosComponent {
         this.listaSemaforos = retorno;
       })
     }
+
+    deletar(semaforo: ISemaforo): void{
+      this.SemaforosService.excluir(semaforo.id!).subscribe(() =>{
+        this.SemaforosService.exibirMensagem(
+          'SISTEMA',
+          `${semaforo.nome} foi excluido com sucesso!`,
+          'toast-error'
+        );
+        this.carregarSemaforos();
+      });
+    } 
 }

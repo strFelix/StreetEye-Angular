@@ -39,6 +39,13 @@ export class SemaforosService {
       catchError(erro => this.exibirErro(erro))
     );
   }
+
+  excluir(id: number): Observable<any>{
+    return this.http.delete<any>(`${this.URL}/${id}`,).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
+  }
     
   exibirErro(e:any): Observable<any> {
     this.exibirMensagem('Erro!', 'Não foi possivel realizar a operação! Requisição sem reposta.', 'toast-error');
