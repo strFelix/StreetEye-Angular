@@ -11,4 +11,3 @@
 
 ## Iniciando projeto
 <p>npm i - npm i angular - npm i bootstrap - npm i bootstrap@4.6.0 - npm i jquery - npm i font-awesome</p>
-<br>
