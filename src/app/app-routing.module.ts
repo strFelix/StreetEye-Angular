@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'', component:HomeComponent},
   {path:'semaforos', component:ListarsemaforosComponent},
   {path:'semaforos/cadastrar', component:CadastrarsemaforosComponent},
-  {path:'semaforos/atualizar', component:AtualizarsemaforosComponent},
+  {path:'semaforos/atualizar/:id', component:AtualizarsemaforosComponent},
 ];
 
 @NgModule({

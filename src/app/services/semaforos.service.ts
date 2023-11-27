@@ -19,13 +19,27 @@ export class SemaforosService {
     );
   }
 
+  buscarporId(id: number): Observable<ISemaforo>{
+    return this.http.get<ISemaforo>(`${this.URL}/${id}`).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
+  }
+
   cadastrar(semaforo: ISemaforo): Observable<ISemaforo>{
     return this.http.post<ISemaforo>(this.URL, semaforo).pipe(
       map(retorno => retorno),
       catchError(erro => this.exibirErro(erro))
     );
-}
-  
+  }
+
+  atualizar(semaforo: ISemaforo): Observable<ISemaforo>{
+    return this.http.put<ISemaforo>(`${this.URL}/${semaforo.id}`, semaforo).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
+  }
+    
   exibirErro(e:any): Observable<any> {
     this.exibirMensagem('Erro!', 'Não foi possivel realizar a operação! Requisição sem reposta.', 'toast-error');
     return EMPTY;
