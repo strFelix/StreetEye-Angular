@@ -18,6 +18,13 @@ export class SemaforosService {
       catchError(erro => this.exibirErro(erro))
     );
   }
+
+  cadastrar(semaforo: ISemaforo): Observable<ISemaforo>{
+    return this.http.post<ISemaforo>(this.URL, semaforo).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
+}
   
   exibirErro(e:any): Observable<any> {
     this.exibirMensagem('Erro!', 'Não foi possivel realizar a operação! Requisição sem reposta.', 'toast-error');

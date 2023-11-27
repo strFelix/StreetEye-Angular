@@ -1,1 +1,89 @@
-<p>cadastrarsemaforos works!</p>
+<div class="container" style="max-width: 80%">
+  <h1 class="my-3 text-primary">Cadastrar Semaforo</h1>
+  <div class="card shadow">
+    <form class="m-3">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="nome">Nome do semaforo: </label>
+            <input required="Preencha este campo!"  
+              type="text"
+              class="form-control"
+              placeholder="Digite o nome do Produto"
+              name="nomeSemaforo"
+              [(ngModel)]="semaforo.nome"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Fim row -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="nome">Latitude: </label>
+            <input required="Preencha este campo!"
+              type="text"
+              class="form-control"
+              placeholder="Digite o nome do Produto"
+              name="latitudeSemaforo"
+              [(ngModel)]="semaforo.latitude"
+            />
+          </div>
+        </div>
+        <!-- Fim col -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="nome">Longitude: </label>
+            <input required="Preencha este campo!"
+              type="text"
+              class="form-control"
+              placeholder="Digite o nome do Produto"
+              name="logitudeSemaforo"
+              [(ngModel)]="semaforo.longitude"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row" style="padding-left: 15px">
+        <label for="nome">Status: </label>
+        
+        <div class="form-check ml-2">
+          <input 
+            class="form-check-input"
+            type="radio"
+            name="statusSemaforo"
+            value="Online"
+            id="flexRadioDefault1"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Online
+          </label>
+        </div>
+        <div class="form-check ml-2">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="statusSemaforo"
+            value="Offline"
+            id="flexRadioDefault2"
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Offline
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button
+            class="btn btn-success"
+            style="width: 100%; margin-top: 10px"
+            (click)="salvarSemaforo()"
+          >
+            Salvar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
