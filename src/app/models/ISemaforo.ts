@@ -1,6 +1,7 @@
 export interface ISemaforo{
     id?: number;
     nome: string;
-    localizacao: string;
+    latitude: string;
+    longitude: string;
     status: string;
 }
