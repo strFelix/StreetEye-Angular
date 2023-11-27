@@ -1,7 +1,6 @@
-
 <div class="container">
   <h1 class="my-3 text-primary">
-    Listar Semaforos
+    Listar Semáforos
     <button
       type="button"
       routerLink="/semaforos/cadastrar"
@@ -20,26 +19,37 @@
           <th>Latitude</th>
           <th>Longitude</th>
           <th>Status</th>
-          <th style="margin-left: 200px;">Ações</th>
+          <th style="margin-left: 200px">Ações</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let semaforo of listaSemaforos">
-          <td><div class="container"><img src="../../../../assets/img/streetEye.png" alt="Semaforo"></div></td>
+          <td>
+            <div class="container">
+              <img src="../../../../assets/img/streetEye.png" alt="Semáforo" />
+            </div>
+          </td>
           <td>{{ semaforo.nome }}</td>
           <td>{{ semaforo.latitude }}</td>
           <td>{{ semaforo.longitude }}</td>
-          <td><div class="container">{{ semaforo.status }}</div></td>
-          
+          <td>
+            <div class="container">{{ semaforo.status }}</div>
+          </td>
+
           <button
             type="button"
             routerLink="/semaforos/atualizar/{{ semaforo.id }}"
-            class="btn btn-warning" style="margin-top: 7px;"
+            class="btn btn-warning"
+            style="margin-top: 7px"
           >
-          <i class="fa fa-pencil" aria-hidden="true"></i>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
           </button>
 
-          <button class="btn btn-danger ml-2" style="margin-top: 7px;" (click)="deletar(semaforo)">
+          <button
+            class="btn btn-danger ml-2"
+            style="margin-top: 7px"
+            (click)="deletar(semaforo)"
+          >
             <i class="fa fa-trash-o" aria-hidden="true"></i>
           </button>
         </tr>
