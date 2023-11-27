@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ISemaforo } from '../models/ISemaforo';
-import { Observable } from 'rxjs';
+import { EMPTY, Observable, catchError, map } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +10,21 @@ import { Observable } from 'rxjs';
 export class SemaforosService {
 
   private URL: string = "http://localhost:3000/semaforos";
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private toastr: ToastrService) { }
 
   buscarTodos(): Observable<ISemaforo[]>{
-    return this.http.get<ISemaforo[]>(this.URL);
-    
-    // .pipe(
-    //   map(retorno => retorno),
-    //   catchError(erro => this.exibirErro(erro))
-    // );
+    return this.http.get<ISemaforo[]>(this.URL).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
+  }
+  
+  exibirErro(e:any): Observable<any> {
+    this.exibirMensagem('Erro!', 'Não foi possivel realizar a operação! Requisição sem reposta.', 'toast-error');
+    return EMPTY;
+  }
+
+  exibirMensagem(titulo: string, mensagem: string, tipo: string):void {
+    this.toastr.show(mensagem, titulo, {closeButton: true, progressBar: true}, tipo);
   }
 }

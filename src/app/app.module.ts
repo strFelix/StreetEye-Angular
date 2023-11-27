@@ -14,6 +14,9 @@ import { CadastrarsemaforosComponent } from './components/semaforos/cadastrarsem
 import { AtualizarsemaforosComponent } from './components/semaforos/atualizarsemaforos/atualizarsemaforos.component';
 import { ListarsemaforosComponent } from './components/semaforos/listarsemaforos/listarsemaforos.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { ListarsemaforosComponent } from './components/semaforos/listarsemaforos
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
