@@ -48,9 +48,10 @@ span{
 
 #p-main{
     line-height: 20px;
-    max-width: 400px;
+    max-width: 410px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+    text-align: left;
 }
 
 aside {
